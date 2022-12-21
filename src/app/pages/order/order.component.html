@@ -1,1 +1,138 @@
-<p>order works!</p>
+<ng-container>
+    <div class="container cart">
+        <div class="row mt-5 mb-5">
+            <div class="col-sm-9">
+
+                <div class="table-responsive mt-5">
+                    <table class="table table-borderedless">
+                        <thead class="thead-light">
+                            <tr>
+                                <th scope="col"> S.No </th>
+                                <th scope="col"> Product Name </th>
+                                <th scope="col"> Product Image </th>
+                                <th scope="col"> Description </th>
+                                <th scope="col"> </th>
+                                <th scope="col"> Quantity </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let item of products ; let i = index">
+                                <td> {{i+1}} </td>
+                                <td> {{item.name}} </td>
+                                <td> <img src="{{item.image}}" alt="grapes" class="images"> </td>
+                                <td> {{item.details}} </td>
+                                <td> </td>
+                                <td>
+                                    <div class="btn-group btn-group-sm" role="group" aria-label="...">
+                                        <button class="btn btn-danger"><i
+                                                class="las la-minus-circle"></i>
+                                        </button> &nbsp;
+                                        <span> {{item.quantity}} </span> &nbsp;
+                                        <button class=" btn btn-primary"> <i class="las la-plus-circle"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+
+                                <td colspan="3"></td>
+                                <td>
+                                    <button class="btn btn-danger btn-sm"> <i
+                                            class="las la-trash-alt">
+                                            Empty Cart </i>
+                                    </button>
+                                </td>
+                                <td>
+                                    <button class="btn btn-primary btn-sm" [routerLink]="['../menu']"> <i
+                                            class="las la-shopping-bag"> Shop More </i>
+                                    </button>
+                                </td>
+                                <td>
+                                    <button class="btn btn-success btn-sm" [routerLink]="['../payment']"> <i
+                                            class="las la-check-circle"> Checkout </i>
+                                    </button>
+                                </td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+
+
+            <div class="col-sm-3">
+
+                <div class="card pt-3">
+                    <h5 class="text-secondary text-center"> PRICE DETA.ILS </h5>
+                    <hr>
+                    <h5 class="pl-2"> <i class="las la-dollar-sign"></i> Price (1 item ) <span class="float-right mr-3">
+                            1000 </span> </h5>
+                    <h5 class="pl-2"><i class="las la-tag"></i> Discount <span class="text-success float-right mr-3">
+                            -100 </span> </h5>
+                    <h5 class="pl-2"> Delivery Charges <span class="float-right mr-3"> 50 </span> </h5>
+                    <hr>
+                    <!-- <h5 class="pl-2"> <i class="las la-dollar-sign"></i> Total Amount <span class="float-right mr-3">
+                            {{totalItem}}
+                        </span></h5> -->
+                    <hr>
+                    <p class="text-success pl-2"> You Will Save 50 on this order.. </p>
+                </div>
+
+                <p class="mt-4 pl-2"> <i class="las la-shield-alt text-secondary"> Safe and Secure Payments.
+                        Easy returns.100% Authentic products. </i> </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 secure">
+                <span class="c-icon"><i class="las la-lock"></i></span>
+                <h2 class="title"> Your Information is Safe </h2>
+                <p class="info"> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt officiis ut ex
+                    voluptas qui quidem sapiente, pariatur porro? Voluptates esse doloribus, vitae deserunt id explicabo
+                    velit. Ad animi.
+                </p>
+            </div>
+            <div class="col-md-4 secure">
+                <span class="c-icon"><i class="las la-shield-alt"></i></span>
+                <h2 class="title"> Secure Checkout </h2>
+                <p class="info"> facere, maxime ullam fugit cumque nulla corrupti quisquam asperiores tempora
+                    assumenda ab sint sapiente sit eius in laboriosam et expedita! Tempora recusandae magni minima
+                    adipisci?
+                </p>
+            </div>
+            <div class="col-md-4 secure">
+                <span class="c-icon"><i class="las la-phone"></i></span>
+                <h2 class="title"> 24/7 Customer Support </h2>
+                <p class="info"> facere, maxime ullam fugit cumque nulla corrupti quisquam asperiores tempora
+                    assumenda ab sint sapiente sit eius in laboriosam et expedita! Tempora recusandae magni minima
+                    adipisci?
+                </p>
+            </div>
+        </div>
+    </div>
+    
+</ng-container>
+
+
+
+
+
+<!--------------------------------------------------Empty Cart----------------------------------------------------------------->
+
+
+<ng-container>
+    <div class="container cart">
+        <div class="card center mt-5 align-items-center">
+            <h5 class="text-center mt-4"> My Cart </h5>
+
+            <img src="assets/icons/empty.png" alt="Empty Cart" class="img-fluid">
+            <h4 class="text-center"> Your cart is empty! </h4>
+            <h6 class="text-center"> Add item to it now </h6>
+            <button class="btn btn-primary mb-5" [routerLink]="['../menu']"> Shop Now </button>
+
+        </div>
+    </div>
+</ng-container>

@@ -53,6 +53,11 @@ ul li.active {
 
 .prod-img {
     border-radius: 18px;
-    object-fit: fill;
+    object-fit: cover;
     height: 210px;
+}
+
+i {
+    font-size: 24px;
+    color: black;
 }

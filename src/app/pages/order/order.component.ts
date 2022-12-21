@@ -7,9 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OrderComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+   }
 
   ngOnInit(): void {
   }
+
+  products = [
+    {
+      name : "Irshath",
+      image : "./assets/products/spices/z1.jpg",
+      details : "It is worthy",
+      quantity : 3
+    }
+  ]
 
 }
