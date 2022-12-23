@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'bestBrand'`, () => {
+  it(`should have as title 'BestBrand'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('bestBrand');
+    expect(app.title).toEqual('BestBrand');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('bestBrand app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('BestBrand app is running!');
   });
 });

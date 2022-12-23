@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "bestBrand": {
+    "BestBrand": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -69,10 +69,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "bestBrand:build:production"
+              "browserTarget": "BestBrand:build:production"
             },
             "development": {
-              "browserTarget": "bestBrand:build:development"
+              "browserTarget": "BestBrand:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -80,7 +80,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "bestBrand:build"
+            "browserTarget": "BestBrand:build"
           }
         },
         "test": {
@@ -105,6 +105,6 @@
     }
   },
   "cli": {
-    "analytics": "1425c476-7347-4464-8600-ce21b7ca2a72"
+    "analytics": "a0a2d617-aed7-4979-8b89-3ca603202b96"
   }
 }

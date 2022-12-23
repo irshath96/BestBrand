@@ -1,18 +1,13 @@
 .banner {
-    margin-bottom: 10px;
-    height: 350px;
-    width: 100%;
-    object-fit: contain;
     position: relative;
 }
 
 .ban-text {
     position: absolute;
-    top: 90px;
-    left: 50px;
+    top: 100px;
+    left: 20px;
     z-index: 100;
     color: white;
-    background-color: red;
 }
 
 ul li {
@@ -56,6 +51,7 @@ ul li.active {
     border-radius: 18px;
     object-fit: cover;
     height: 210px;
+    padding: 5px;
 }
 
 i{

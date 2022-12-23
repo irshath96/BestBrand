@@ -1,0 +1,11 @@
+
+.item {
+    object-fit: contain;
+    width: 350px;
+    border-radius: 20px;
+}
+
+.item:hover {
+    box-shadow: 1px 1px 1px;
+    transition: 0.2s;
+}

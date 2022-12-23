@@ -1,11 +1,15 @@
-<div class="banner">
-    <!-- <img src="./assets/banner/computer.png" alt="banner" class="img-fluid" width="100%" height="400px"> -->
-    <p class="ban-text fs-2 text-uppercase fw-bold"> Spices </p>
 
-</div>
 
 
 <section id="product mb-5">
+
+    <div class="banner">
+        <img src="https://baldhaexport.com/wp-content/uploads/2022/01/Spices.jpg" alt="banner" class="img-fluid" width="100%" height="350px">
+        <p class="ban-text fs-2 text-uppercase fw-bold"> Spices </p>
+    
+    </div>
+
+
     <div class="container-fluid">
 
         <div class="row py-2">
@@ -13,16 +17,16 @@
 
                 <ul class="list-group">
                     <li class="list-group-item active" aria-current="true" [routerLink]="['../spices']"> Spices </li>
-                    <li class="list-group-item" [routerLink]="['../pulses']"> Pulse & Grain </li>
-                    <li class="list-group-item" [routerLink]="['../dry-fruits']"> Dry Fruits </li>
+                    <li class="list-group-item" [routerLink]="['../pulse']"> Pulse & Grain </li>
+                    <li class="list-group-item" [routerLink]="['../dry']"> Dry Fruits </li>
                     <li class="list-group-item" [routerLink]="['../namkeen']"> Namkeen & Sweet </li>
-                    <li class="list-group-item" [routerLink]="['../flour']"> Flours </li>
+                    <li class="list-group-item" [routerLink]="['../flours']"> Flours </li>
                     <li class="list-group-item" [routerLink]="['../rice']"> Rice </li>
-                    <li class="list-group-item" [routerLink]="['../religious-products']"> Religious Products </li>
-                    <li class="list-group-item" [routerLink]="['../kitchen-cutlery']"> Kitchen Cutlery </li>
+                    <li class="list-group-item" [routerLink]="['../religious']"> Religious Products </li>
+                    <li class="list-group-item" [routerLink]="['../kitchen']"> Kitchen Cutlery </li>
                     <li class="list-group-item" [routerLink]="['../pickles']"> Pickles, Sauce & Chutney </li>
                     <li class="list-group-item" [routerLink]="['../bakery']"> Bakery & Biscuits </li>
-                    <li class="list-group-item" [routerLink]="['../others']"> Others </li>
+                    <li class="list-group-item" [routerLink]="['../other']"> Others </li>
                 </ul>
 
             </div>
@@ -41,12 +45,13 @@
                             <img src="{{item.image}}"
                                 alt="Spices1" class="card-img-top prod-img">
                             <div class="card-body">
-                                <h4 class="card-text text-center fs-6 fw-bold">{{item.name}} </h4>
+                                <h4 class="card-text d-inline text-center fs-6 fw-bold">{{item.name}} </h4>
+                                <span class="float-end fw-bold"> $ {{item.amount}}</span>
                             </div>
 
                             <div class="card-btn mb-3 text-center">
                                 <a type="button" class="btn btn-primary"> Details </a> &nbsp;
-                                <a type="button" class="btn btn-warning"> <i class="las la-shopping-cart"> </i> </a>
+                                <a type="button" class="btn btn-warning" (click)="addtoCart(item)"> <i class="las la-shopping-cart"> </i> </a>
                             </div>
                         </div>
 

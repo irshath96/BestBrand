@@ -1,0 +1,67 @@
+
+
+
+<section id="product mb-5">
+
+    <div class="banner">
+        <img src="https://baldhaexport.com/wp-content/uploads/2022/01/Dryfruits-1.jpg" alt="banner" class="img-fluid" width="100%" height="350px"> 
+        <p class="ban-text fs-2 text-uppercase fw-bold"> Dry Fruits </p>
+    
+    </div>
+
+
+    <div class="container-fluid">
+
+        <div class="row py-2">
+            <div class="col-md-3 col-12">
+
+                <ul class="list-group">
+                    <li class="list-group-item" aria-current="true" [routerLink]="['../spices']"> Spices </li>
+                    <li class="list-group-item" [routerLink]="['../pulse']"> Pulse & Grain </li>
+                    <li class="list-group-item active" [routerLink]="['../dry']"> Dry Fruits </li>
+                    <li class="list-group-item" [routerLink]="['../namkeen']"> Namkeen & Sweet </li>
+                    <li class="list-group-item" [routerLink]="['../flours']"> Flours </li>
+                    <li class="list-group-item" [routerLink]="['../rice']"> Rice </li>
+                    <li class="list-group-item" [routerLink]="['../religious']"> Religious Products </li>
+                    <li class="list-group-item" [routerLink]="['../kitchen']"> Kitchen Cutlery </li>
+                    <li class="list-group-item" [routerLink]="['../pickles']"> Pickles, Sauce & Chutney </li>
+                    <li class="list-group-item" [routerLink]="['../bakery']"> Bakery & Biscuits </li>
+                    <li class="list-group-item" [routerLink]="['../other']"> Others </li>
+                </ul>
+
+            </div>
+
+            <!----------------------------------------------------------------
+            ------------------------------------------------------------------------>
+
+            <div class="col-md-9 col-12 my-3">
+
+                <div class="row row-cols-1 row-cols-md-3 g-3">
+
+                    <div class="col-md-3 col-6" *ngFor="let item of products">
+
+                        <div class="card">
+
+                            <img src="{{item.image}}"
+                                alt="Spices1" class="card-img-top prod-img">
+                            <div class="card-body">
+                                <h4 class="card-text text-center fs-6 fw-bold">{{item.name}} </h4>
+                            </div>
+
+                            <div class="card-btn mb-3 text-center">
+                                <a type="button" class="btn btn-primary"> Details </a> &nbsp;
+                                <a type="button" class="btn btn-warning"> <i class="las la-shopping-cart"> </i> </a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div> 
+
+        </div>
+
+    </div>
+
+</section>

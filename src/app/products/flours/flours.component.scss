@@ -1,0 +1,59 @@
+.banner {
+    position: relative;
+}
+
+.ban-text {
+    position: absolute;
+    z-index: 100;
+    color: white;
+    top: 100px;
+    left: 20px;
+}
+
+ul li {
+    color: black;
+    font-weight: bold;
+    border: none;
+    padding-left: 50px;
+    margin-bottom: 10px;
+}
+
+ul li:hover {
+    background-color: #79c51d;
+    padding-left: 120px;
+    border-radius: 15px;
+    padding-left: 20px;
+    text-align: center;
+    color: white;
+}
+
+ul li.active {
+    background-color: #79c51d;
+    padding-left: 120px;
+    border-radius: 15px;
+    padding-left: 20px;
+    text-align: center;
+    color: white;
+}
+
+.card {
+    box-shadow: 1px 1px 1px;
+    border-radius: 20px;
+}
+
+.card-btn {
+    display: flex;
+    justify-content: center;
+}
+
+.prod-img {
+    border-radius: 18px;
+    object-fit: cover;
+    height: 210px;
+    padding: 5px;
+}
+
+i {
+    font-size: 24px;
+    color: black;
+}

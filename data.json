@@ -1,0 +1,46 @@
+{
+  "productList": [
+    {
+      "prodId": 1,
+      "category": "Spices",
+      "name": "Chilli Powder",
+      "image": "/assets/products/spices/z1.jpg",
+      "amount": 100,
+      "quantity": 1
+    },
+    {
+      "prodId": 2,
+      "category": "Spices",
+      "name": "Turmeric Powder",
+      "image": "/assets/products/spices/z2.jpg",
+      "amount": 200,
+      "quantity": 1 
+    },
+    {
+      "prodId": 3,
+      "category": "Spices",
+      "name": "Black Pepper Powder",
+      "image": "/assets/products/spices/z3.jpg",
+      "amount": 300,
+      "quantity": 1
+    },
+    {
+      "prodId": 4,
+      "category": "Spices",
+      "name": "Garlic Powder",
+      "image": "/assets/products/spices/z4.jpg",
+      "amount": 400,
+      "quantity": 1
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

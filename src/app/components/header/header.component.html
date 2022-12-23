@@ -1,0 +1,56 @@
+<nav class="navbar navbar-expand-lg bg-white sticky-top head">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#"><img src="./assets/icons/gold.png" alt="logo" class="img-fluid logo"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['../home']" routerLinkActive="active-link"
+                        [routerLinkActiveOptions]="{exact:true}"> Home </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['../about']" routerLinkActive="active-link"> About </a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false" [routerLink]="['../products']" routerLinkActive="active-link">
+                        Products
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" [routerLink]="['../bakery']"> Bakery & Biscuits </a></li>
+                        <li><a class="dropdown-item" [routerLink]="['../dry']"> Dry Fruits </a></li>
+                        <li><a class="dropdown-item" [routerLink]="['../flours']"> Flour </a></li>
+                        <li><a class="dropdown-item" [routerLink]="['../kitchen']"> Kitchen Cutlery
+                            </a></li>
+                        <li><a class="dropdown-item" [routerLink]="['../namkeen']"> Namkeen & Sweets </a></li>
+                        <li><a class="dropdown-item" [routerLink]="['../pickles']"> Pickles Sauce & Chutney
+                            </a></li>
+                        <li><a class="dropdown-item" [routerLink]="['../pulse']"> Pulses & Grain </a></li>
+                        <li><a class="dropdown-item" [routerLink]="['../religious']"> Religious
+                                Products </a></li>
+                        <li><a class="dropdown-item" [routerLink]="['../rice']">
+                                Rice </a></li>
+                        <li><a class="dropdown-item" [routerLink]="['../spices']"> Spices </a></li>
+                        <li><a class="dropdown-item" [routerLink]="['../other']"> Others </a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['../contact']" routerLinkActive="active-link"> Contact </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['../cart']"
+                        routerLinkActive="active-link"> <i class="las la-shopping-cart"> </i> <span class="badge bg-danger">{{totalItem}}</span> </a>
+                </li>
+
+            </ul>
+
+        </div>
+    </div>
+</nav>

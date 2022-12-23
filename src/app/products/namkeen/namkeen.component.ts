@@ -31,10 +31,4 @@ export class NamkeenComponent implements OnInit {
     }
   ]
 
-
-
-
-
-
-
 }
