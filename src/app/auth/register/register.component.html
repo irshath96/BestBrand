@@ -1,1 +1,44 @@
-<p>register works!</p>
+<div class="container">
+
+    <div class="box mt-4 shadow p-3 mb-5 bg-light rounded">
+
+    <h3 class="text-center"> Create a new account </h3> <br>
+
+    <div class="d-flex justify-content-center">
+        <form class="form" [formGroup]="registerForm" (ngSubmit)="signup()">
+            
+            <div class="form-group mt-2">
+                <label for="userName" class="form-label"> Name </label>
+                <input type="text" class="form-control" formControlName="name">
+                <span class="text-danger" *ngIf="registerForm.controls['name'].dirty && registerForm.hasError('required','name')"> Name is required </span>
+            </div>
+
+            <div class="form-group mt-2">
+                <label for="userMobile" class="form-label"> Mobile </label>
+                <input type="number" class="form-control" formControlName="mobile">
+                <span class="text-danger" *ngIf="registerForm.controls['mobile'].dirty && registerForm.hasError('required','mobile')"> Mobile Number is required </span>
+            </div>
+
+            <div class="form-group mt-2">
+                <label for="userEmail" class="form-label"> Email </label>
+                <input type="email" class="form-control" formControlName="email">
+                <span class="text-danger" *ngIf="registerForm.controls['email'].dirty && registerForm.hasError('requird','email')"> Email Id is required </span>
+            </div>
+
+            <div class="form-group mt-2 mb-2">
+                <label for="userPassword" class="form-label"> Password </label>
+                <input type="password" class="form-control" formControlName="password">
+                <span class="text-danger" *ngIf="registerForm.controls['password'].dirty && registerForm.hasError('required','password')"> Password is required </span>
+            </div>
+
+            <button type="submit" [disabled]="!registerForm.valid" class="btn btn-primary ml-3 sign"> sign in </button>
+       
+        </form>
+    </div>
+
+<div class="forgot mb-2">
+    <a class="text-center text-decoration-none"> Alredy have a account? <span [routerLink]="['../login']"> Sign up for free! </span></a>
+</div>
+
+</div>
+</div> 

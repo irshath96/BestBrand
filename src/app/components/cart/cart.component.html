@@ -1,7 +1,6 @@
-<ng-container *ngIf="products.length != 0">
+<ng-container>
+     <!-- *ngIf="products.length != 0" -->
     <div class="container cart">
-        <div class="row mt-5 mb-5">
-            <div class="col-sm-9">
 
                 <div class="table-responsive mt-5">
                     <table class="table table-borderedless">
@@ -12,20 +11,23 @@
                                 <th scope="col"> Unit </th>
                                 <th scope="col"> Price </th>
                                 <th scope="col"> Quantity </th>
+                                <th scope="col"> Total </th>
+                                <th scope="col"></th>
+
                             </tr>
                         </thead>
                         <tbody>
                             <tr *ngFor="let item of products ; let i = index">
-                            
-                                
+
+
                                 <td> <img src="{{item.image}}" alt="grapes" class="images img-fluid"> </td>
                                 <td> {{item.name}} </td>
                                 <td> <select class="form-select" aria-label="Default select example">
-                                    <option selected> -- </option>
-                                    <option value="1"> 250 g </option>
-                                    <option value="2"> 500 g </option>
-                                    <option value="3"> 1 kg </option>
-                                  </select> </td>
+                                        <option selected> -- </option>
+                                        <option value="1"> 250 g </option>
+                                        <option value="2"> 500 g </option>
+                                        <option value="3"> 1 kg </option>
+                                    </select> </td>
                                 <td> ${{item.amount}} </td>
                                 <td>
                                     <div class="btn-group btn-group-sm" role="group" aria-label="...">
@@ -33,14 +35,32 @@
                                                 class="las la-minus-circle"></i>
                                         </button> &nbsp;
                                         <span> {{item.quantity}} </span> &nbsp;
-                                        <button class=" btn btn-primary" (click)="addQnt(item)"> <i class="las la-plus-circle"></i>
+                                        <button class=" btn btn-primary" (click)="addQnt(item)"> <i
+                                                class="las la-plus-circle"></i>
                                         </button>
                                     </div>
                                 </td>
                             </tr>
+
+                            <tr>
+                                <td colspan="5"></td>
+                                <td> Total </td>
+                                <td> $ 0.00</td>
+                            </tr>
+                            <tr>
+                                <td colspan="5"></td>
+                                <td> Tax </td>
+                                <td> + 0.00 </td>
+                            </tr>
+                            <tr>
+                                <td colspan="5"></td>
+                                <td> Net Total </td>
+                                <td> $ 0.00 </td>
+                            </tr>
+
                             <tr>
 
-                                <td colspan="3"></td>
+                                <td colspan="4"></td>
                                 <td>
                                     <button class="btn btn-danger btn-sm" (click)="emptyCart()"> <i
                                             class="las la-trash-alt">
@@ -54,7 +74,7 @@
                                 </td>
                                 <td>
                                     <button class="btn btn-success btn-sm" [routerLink]="['../payment']"> <i
-                                            class="las la-check-circle"> Checkout </i>
+                                            class="las la-check-circle"> Make Order </i>
                                     </button>
                                 </td>
 
@@ -66,7 +86,7 @@
             </div>
 
 
-            <div class="col-sm-3">
+            <!-- <div class="col-sm-3">
 
                 <div class="card pt-3">
                     <h5 class="text-secondary text-center"> PRICE DETAILS </h5>
@@ -86,11 +106,9 @@
 
                 <p class="mt-4 pl-2"> <i class="las la-shield-alt text-secondary"> Safe and Secure Payments.
                         Easy returns.100% Authentic products. </i> </p>
-            </div>
-        </div>
-    </div>
+            </div> -->
 
-    <div class="container">
+    <!-- <div class="container">
         <div class="row pb-5">
             <div class="col-md-4 secure">
                 <span class="c-icon"><i class="las la-lock"></i></span>
@@ -117,8 +135,8 @@
                 </p>
             </div>
         </div>
-    </div>
-    
+    </div> -->
+
 </ng-container>
 
 
@@ -128,12 +146,12 @@
 <!--------------------------------------------------Empty Cart----------------------------------------------------------------->
 
 
-<ng-container *ngIf="products.length == 0">
+<!-- <ng-container *ngIf="products.length == 0">
     <div class="container cart">
         <div class="card center align-items-center">
             <h5 class="text-center mt-4"> My Cart </h5>
 
-            
+
             <img src="./assets/icons/empty.png" alt="Empty Cart" class="img-fluid">
             <h4 class="text-center"> Your cart is empty! </h4>
             <h6 class="text-center"> Add item to it now </h6>
@@ -141,4 +159,7 @@
 
         </div>
     </div>
-</ng-container>
+</ng-container> -->
+
+
+

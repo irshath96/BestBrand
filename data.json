@@ -14,7 +14,7 @@
       "name": "Turmeric Powder",
       "image": "/assets/products/spices/z2.jpg",
       "amount": 200,
-      "quantity": 1 
+      "quantity": 1
     },
     {
       "prodId": 3,
@@ -33,11 +33,20 @@
       "quantity": 1
     }
   ],
-  "comments": [
+  "userDetails": [
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "name": "ijas khan",
+      "mobile": 9876543210,
+      "email": "ijas@gmail.com",
+      "password": "ijas@123",
+      "id": 1
+    },
+    {
+      "name": "Noor Siraj",
+      "mobile": 9876543210,
+      "email": "noor@gmail.com",
+      "password": "noor@123",
+      "id": 2
     }
   ],
   "profile": {
