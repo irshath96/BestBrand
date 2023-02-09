@@ -11,7 +11,7 @@ export class ProductService {
 
   getProductList() {
      // return this.http.get<any>("http://localhost:3000/productList")
-     return this.http.get<any>("./assets/data/product.json")
+     return this.http.get<any>("assets/data/product.json")
       .pipe(map((res: any) => {
         return res;
       }))
