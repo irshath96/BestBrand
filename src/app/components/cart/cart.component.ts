@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { CartService } from 'src/app/service/cart.service';
 
 @Component({
@@ -9,10 +10,11 @@ import { CartService } from 'src/app/service/cart.service';
 export class CartComponent implements OnInit {
 
   public products : any = [];
-  public totalItem : number = 0;
+  public totalItem ! : number; 
+  // public totalItem : number = 0;
 
 
-  constructor(private cart : CartService) { }
+  constructor(private cart : CartService, private route : Router) { }
 
   ngOnInit(): void {
 
@@ -22,6 +24,14 @@ export class CartComponent implements OnInit {
 
     })
     console.log(this.products)
+  }
+
+  removeItem(item:any){
+    this.cart.removeCart(item);
+  }
+
+  emptyCart() {
+    this.cart.removeAllCart();
   }
 
   removeQnt(item : any){
@@ -42,10 +52,5 @@ export class CartComponent implements OnInit {
     // console.log(item.quantity);
 
   }
-
-  emptyCart() {
-    this.cart.removeAllCart();
-  }
-
 
 }

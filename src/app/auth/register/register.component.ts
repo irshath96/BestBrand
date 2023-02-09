@@ -17,15 +17,24 @@ export class RegisterComponent implements OnInit {
 
   ngOnInit(): void {
     this.registerForm = this.fb.group({
-      name : ['', Validators.required],
-      mobile : ['', Validators.required],
+      firstName : ['', Validators.required],
+      lastName : ['', Validators.required],
+      city : ['', Validators.required],
+      country : ['', Validators.required],
+      address1 : ['', Validators.required],
+      address2 : ['', Validators.required],
+      address3 : ['', Validators.required],
+      address4 : ['', Validators.required],
       email : ['', Validators.required],
-      password : ['',Validators.required]
+      number : ['', Validators.required],
+      cPassword : ['',Validators.required],
+      rPassword : ['',Validators.required]
     })
   }
 
-  signup() {
-    this.http.post<any>("http://localhost:3000/userDetails", this.registerForm.value)
+  register() {
+    // this.http.post<any>("http://localhost:3000/userDetails", this.registerForm.value)
+    this.http.post<any>("../assets/data/product.json", this.registerForm.value)
     .subscribe(res => {
       alert ("Signup Successfull");
       this.registerForm.reset();

@@ -6,54 +6,54 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class CartService {
 
-public cartList : any = []
-public products = new BehaviorSubject<any>([]);
+  public cartList: any = [];
+  public products = new BehaviorSubject<any>([]);
 
   constructor() { }
 
-getproducts() {
-return this.products.asObservable();
-}
+  getproducts() {
+    return this.products.asObservable();
+  }
 
-setProducts(product : any) {
-  this.cartList.push(...product);
-  this.products.next(product);
-}
+  setProducts(product: any) {
+    this.cartList.push(...product);
+    this.products.next(product);
+  }
 
-addtoCart(product : any)
-{
-  this.cartList.push(product);
-  this.products.next(this.cartList);
-  this.getTotalPrice();
-  console.log(this.cartList);
-}
+  addtoCart(product: any) {
+    this.cartList.push(product);
+    this.products.next(this.cartList);
+    this.getTotalPrice();
+    console.log(this.cartList);
+  }
 
-getTotalPrice() : number{
-  let grandTotal = 0;
-  this.cartList.map((a:any)=>{
-    grandTotal += a.total;
-  })
-  return grandTotal
-}
+  getTotalPrice(): number {
+    let grandTotal = 0;
+    this.cartList.map((a: any) => {
+      grandTotal += a.total;
+    })
+    return grandTotal;
+  }
 
-removeCart(product : any) {
-  this.cartList.map((a:any,index:any)=>{
-    if(product.id === a.id) {
-      this.cartList.splice(index,1);
-    }
-  })
-  this.products.next(this.cartList);
-}
 
-removeAllCart(){
-  this.cartList = [];
-  this.products.next(this.cartList);
-}
+  removeCart(product: any) {
+    this.cartList.map((a: any, index: any) => {
+      if (product.id === a.id) {
+        this.cartList.splice(index, 1);
+      }
+    })
+    this.products.next(this.cartList);
+  }
 
-addCart(product:any){
-  this.cartList.push(...product);
-  this.products.next(product);
+  removeAllCart() {
+    this.cartList = [];
+    this.products.next(this.cartList);
+  }
 
-}
+  // addCart(product: any) {
+  //   this.cartList.push(...product);
+  //   this.products.next(product);
+
+  // }
 
 }

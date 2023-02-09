@@ -5,7 +5,7 @@
       "category": "Spices",
       "name": "Chilli Powder",
       "image": "/assets/products/spices/z1.jpg",
-      "amount": 100,
+      "price": 100,
       "quantity": 1
     },
     {
@@ -13,7 +13,7 @@
       "category": "Spices",
       "name": "Turmeric Powder",
       "image": "/assets/products/spices/z2.jpg",
-      "amount": 200,
+      "price": 200,
       "quantity": 1
     },
     {
@@ -21,7 +21,7 @@
       "category": "Spices",
       "name": "Black Pepper Powder",
       "image": "/assets/products/spices/z3.jpg",
-      "amount": 300,
+      "price": 300,
       "quantity": 1
     },
     {
@@ -29,25 +29,12 @@
       "category": "Spices",
       "name": "Garlic Powder",
       "image": "/assets/products/spices/z4.jpg",
-      "amount": 400,
+      "price": 400,
       "quantity": 1
     }
   ],
   "userDetails": [
-    {
-      "name": "ijas khan",
-      "mobile": 9876543210,
-      "email": "ijas@gmail.com",
-      "password": "ijas@123",
-      "id": 1
-    },
-    {
-      "name": "Noor Siraj",
-      "mobile": 9876543210,
-      "email": "noor@gmail.com",
-      "password": "noor@123",
-      "id": 2
-    }
+    
   ],
   "profile": {
     "name": "typicode"

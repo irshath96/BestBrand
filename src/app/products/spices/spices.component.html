@@ -42,12 +42,11 @@
 
                             <img src="{{item.image}}" alt="Spices1" class="card-img-top prod-img">
                             <div class="card-body">
-                                <h4 class="card-text d-inline text-center fs-6 fw-bold"> {{item.name}} </h4>
-                                <span class="float-end fw-bold"> {{item.amount | currency }} </span>
+                                <h4 class="card-text text-center fs-6 fw-bold"> {{item.name}} </h4>
                             </div>
 
                             <div class="card-btn mb-3 text-center">
-                                <a type="button" class="btn btn-primary"> Details </a> &nbsp;
+                                <a type="button" class="btn btn-primary" [routerLink]="['../details']"> Details </a> &nbsp;
                                 <a type="button" class="btn btn-warning" (click)="addtoCart(item)"> <i
                                         class="las la-shopping-cart"> </i> </a>
                             </div>

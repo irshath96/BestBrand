@@ -7,15 +7,15 @@ import { map } from 'rxjs/operators';
 })
 export class ProductService {
 
-  constructor(private http : HttpClient) { }
+  constructor(private http: HttpClient) { }
 
-getProductList()
-{
-  return this.http.get<any>("http://localhost:3000/productList")
-  .pipe(map((res:any)=>{
-    return res;
-  }))
-}
+  getProductList() {
+     // return this.http.get<any>("http://localhost:3000/productList")
+     return this.http.get<any>("../assets/data/product.json")
+      .pipe(map((res: any) => {
+        return res;
+      }))
+  }
 
 
 

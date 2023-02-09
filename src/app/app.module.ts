@@ -26,6 +26,8 @@ import { BakeryComponent } from './products/bakery/bakery.component';
 import { OtherComponent } from './products/other/other.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
+import { DetailsComponent } from './pages/details/details.component';
+import { ConfirmComponent } from './pages/confirm/confirm.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +52,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     KitchenComponent,
     PicklesComponent,
     BakeryComponent,
-    OtherComponent
+    OtherComponent,
+    DetailsComponent,
+    ConfirmComponent
   ],
   imports: [
     BrowserModule,

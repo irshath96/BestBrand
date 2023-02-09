@@ -18,6 +18,11 @@ export class SpicesComponent implements OnInit {
 
     this.api.getProductList().subscribe(res => {
       this.products = res;
+
+      this.products.forEach((a: any) => {
+        Object.assign(a,{ quantity: 1, total: a.price });
+      });
+      console.log(this.products);
     })
   }
 
