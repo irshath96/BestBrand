@@ -38,11 +38,14 @@ export class CartService {
 
   removeCart(product: any) {
     this.cartList.map((a: any, index: any) => {
-      if (product.id === a.id) {
+
+      console.log("label" +a);
+      if (product.prodId === a.prodId) {
         this.cartList.splice(index, 1);
       }
     })
     this.products.next(this.cartList);
+    console.log(this.products);
   }
 
   removeAllCart() {

@@ -23,7 +23,7 @@ export class CartComponent implements OnInit {
       this.totalItem = this.cart.getTotalPrice();
 
     })
-    console.log(this.products)
+    console.log(this.products);
   }
 
   removeItem(item:any){
