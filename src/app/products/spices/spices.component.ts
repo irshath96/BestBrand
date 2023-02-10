@@ -16,7 +16,7 @@ export class SpicesComponent implements OnInit {
       "prodId": 1,
       "category": "Spices",
       "name": "Chilli Powder",
-      "image": "/assets/products/spices/z1.jpg",
+      "image": "assets/products/spices/z1.jpg",
       "price": 100,
       "quantity": 1
     },
@@ -24,7 +24,7 @@ export class SpicesComponent implements OnInit {
       "prodId": 2,
       "category": "Spices",
       "name": "Turmeric Powder",
-      "image": "/assets/products/spices/z2.jpg",
+      "image": "assets/products/spices/z2.jpg",
       "price": 200,
       "quantity": 1
     },
@@ -32,7 +32,7 @@ export class SpicesComponent implements OnInit {
       "prodId": 3,
       "category": "Spices",
       "name": "Black Pepper Powder",
-      "image": "/assets/products/spices/z3.jpg",
+      "image": "assets/products/spices/z3.jpg",
       "price": 300,
       "quantity": 1
     },
@@ -40,7 +40,7 @@ export class SpicesComponent implements OnInit {
       "prodId": 4,
       "category": "Spices",
       "name": "Garlic Powder",
-      "image": "/assets/products/spices/z4.jpg",
+      "image": "assets/products/spices/z4.jpg",
       "price": 400,
       "quantity": 1
     }
