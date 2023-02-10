@@ -36,7 +36,7 @@ export class SpicesComponent implements OnInit {
 
 
   getProductData() {
-    this.http.get('/assets/data/product.json').subscribe(res=>{
+    this.http.get('./assets/data/product.json').subscribe(res=>{
       this.products =res;
 
       this.products.forEach((a:any)=> {
