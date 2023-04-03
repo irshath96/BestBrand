@@ -34,9 +34,21 @@
     }
   ],
   "userDetails": [
-    
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+    {
+      "firstName": "Mohamed",
+      "lastName": "Irshath",
+      "city": "1",
+      "country": "1",
+      "address1": "qw",
+      "address2": "we",
+      "address3": "as",
+      "address4": "sd",
+      "email": "irsath@gmail.com",
+      "number": 9876543210,
+      "password": "qazwsx",
+      "role": "admin",
+      "isActive": true,
+      "id": 1
+    }
+  ]
 }

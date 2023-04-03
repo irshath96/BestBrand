@@ -5,7 +5,14 @@ import { map } from 'rxjs/operators';
 @Injectable({
   providedIn: 'root'
 })
+
+// const apiUrl = "http://localhost:3000/productList";
+
 export class ProductService {
+
+// products: Product[] = [
+//   new Product(1, 'product 1', this is the product 1 desc)
+// ]
 
   constructor(private http: HttpClient) { }
 

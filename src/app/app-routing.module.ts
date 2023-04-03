@@ -4,6 +4,7 @@ import { ForgotComponent } from './auth/forgot/forgot.component';
 import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
 import { CartComponent } from './components/cart/cart.component';
+import { AuthGuard } from './guard/auth.guard';
 import { AboutComponent } from './pages/about/about.component';
 import { ConfirmComponent } from './pages/confirm/confirm.component';
 import { ContactComponent } from './pages/contact/contact.component';

@@ -94,6 +94,22 @@
 
                         <div class="col-md">
                             <div class="form-floating">
+                                <select class="form-select" id="floatingSelect" aria-label="country"
+                                    formControlName="country">
+                                    <option selected> country </option>
+                                    <option value="1"> America </option>
+                                    <option value="2"> India </option>
+                                    <option value="3"> Dubai </option>
+                                </select>
+                                <label for="floatingSelect"> Select the Country </label>
+                                <span class="invalid-feedback"
+                                    *ngIf="registerForm.controls['country'].dirty && registerForm.hasError('required','country')">
+                                    Country is requird </span>
+                            </div>
+                        </div>
+
+                        <div class="col-md">
+                            <div class="form-floating">
                                 <select class="form-select" id="floatingSelect" aria-label="city"
                                     formControlName="city">
                                     <option selected> city </option>
@@ -111,21 +127,6 @@
                             </div>
                         </div>
 
-                        <div class="col-md">
-                            <div class="form-floating">
-                                <select class="form-select" id="floatingSelect" aria-label="country"
-                                    formControlName="country">
-                                    <option selected> country </option>
-                                    <option value="1"> America </option>
-                                    <option value="2"> India </option>
-                                    <option value="3"> Dubai </option>
-                                </select>
-                                <label for="floatingSelect"> Select the Country </label>
-                                <span class="invalid-feedback"
-                                    *ngIf="registerForm.controls['country'].dirty && registerForm.hasError('required','country')">
-                                    Country is requird </span>
-                            </div>
-                        </div>
                     </div>
 
                 </div>
@@ -192,8 +193,7 @@
                             <div class="form-floating mb-3">
                                 <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" formControlName="email">
                                 <label for="floatingInput"> Email address </label>
-                            <small class="text-muted"> We'll never share your email </small>
-                            <span class="invalid-feedback"
+                                <span class="invalid-feedback"
                                 *ngIf="registerForm.controls['email'].dirty && registerForm.hasError('required','email')">
                                 Email id is requird </span>
                         </div>
@@ -216,17 +216,17 @@
                 <div class="mb-3">
                     <div class="row">
 
-                        <div class="col-6">
-                            <label for="firstName" class="form-label"> Create Password </label>
-                            <input type="password" class="form-control" formControlName="cPassword">
+                        <div class="col-12">
+                            <label for="password" class="form-label"> Create Password </label>
+                            <input type="password" class="form-control" formControlName="password">
                             <span class="invalid-feedback"> Password is requird </span>
                         </div>
 
-                        <div class="col-6">
-                            <label for="lastName" class="form-label"> Repeat Password </label>
+                        <!-- <div class="col-6">
+                            <label for="password" class="form-label"> Repeat Password </label>
                             <input type="password" class="form-control" formControlName="rPassword">
                             <span class="invalid-feedback"> Password is requird </span>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
 

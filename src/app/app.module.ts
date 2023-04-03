@@ -28,6 +28,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { DetailsComponent } from './pages/details/details.component';
 import { ConfirmComponent } from './pages/confirm/confirm.component';
+import { FilterPipe } from './filter/filter.pipe';
 
 @NgModule({
   declarations: [
@@ -54,7 +55,8 @@ import { ConfirmComponent } from './pages/confirm/confirm.component';
     BakeryComponent,
     OtherComponent,
     DetailsComponent,
-    ConfirmComponent
+    ConfirmComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,

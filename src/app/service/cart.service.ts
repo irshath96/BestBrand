@@ -21,10 +21,21 @@ export class CartService {
   }
 
   addtoCart(product: any) {
-    this.cartList.push(product);
-    this.products.next(this.cartList);
-    this.getTotalPrice();
-    console.log(this.cartList);
+    // console.log(product);
+    // console.log(this.cartList);
+    const findProd = this.cartList.filter((f: any) => {
+      return product.prodId == f.prodId;
+    })
+   // console.log(findProd)
+    if (findProd.length) {
+      alert('already prod exists')
+    }
+    else {
+      this.cartList.push(product);
+      this.products.next(this.cartList);
+      this.getTotalPrice();
+     // console.log(this.cartList);
+    }
   }
 
   getTotalPrice(): number {
@@ -38,14 +49,11 @@ export class CartService {
 
   removeCart(product: any) {
     this.cartList.map((a: any, index: any) => {
-
-      console.log("label" +a);
       if (product.prodId === a.prodId) {
         this.cartList.splice(index, 1);
       }
     })
     this.products.next(this.cartList);
-    console.log(this.products);
   }
 
   removeAllCart() {
@@ -58,5 +66,7 @@ export class CartService {
   //   this.products.next(product);
 
   // }
+
+
 
 }

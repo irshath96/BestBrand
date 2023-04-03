@@ -12,19 +12,9 @@
 
         <div class="row py-2">
             <div class="col-md-3 col-12">
-
-                <ul class="list-group">
-                    <li class="list-group-item active" aria-current="true" [routerLink]="['../spices']"> Spices </li>
-                    <li class="list-group-item" [routerLink]="['../pulse']"> Pulse & Grain </li>
-                    <li class="list-group-item" [routerLink]="['../dry']"> Dry Fruits </li>
-                    <li class="list-group-item" [routerLink]="['../namkeen']"> Namkeen & Sweet </li>
-                    <li class="list-group-item" [routerLink]="['../flours']"> Flours </li>
-                    <li class="list-group-item" [routerLink]="['../rice']"> Rice </li>
-                    <li class="list-group-item" [routerLink]="['../religious']"> Religious Products </li>
-                    <li class="list-group-item" [routerLink]="['../kitchen']"> Kitchen Cutlery </li>
-                    <li class="list-group-item" [routerLink]="['../pickles']"> Pickles, Sauce & Chutney </li>
-                    <li class="list-group-item" [routerLink]="['../bakery']"> Bakery & Biscuits </li>
-                    <li class="list-group-item" [routerLink]="['../other']"> Others </li>
+        
+                <ul class="list-group" *ngFor="let item of category" (click)="showCategory(item)">
+                    <li class="list-group-item active" aria-current="true"> {{showActive}} </li>
                 </ul>
 
             </div>

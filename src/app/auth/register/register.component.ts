@@ -27,26 +27,27 @@ export class RegisterComponent implements OnInit {
       address4: ['', Validators.required],
       email: ['', Validators.required],
       number: ['', Validators.required],
-      cPassword: ['', Validators.required],
-      rPassword: ['', Validators.required]
+      password: ['', Validators.required],
+      role: [''],
+      isActive : [false]
     })
+  }
+
+  register() {
+    this.http.post<any>("http://localhost:3000/userDetails", this.registerForm.value)
+      .subscribe(res => {
+        alert("Signup Successfull");
+        this.registerForm.reset();
+        this.route.navigate(['login']);
+      })
   }
 
   // register() {
-  //   this.http.post<any>("http://localhost:3000/userDetails", this.registerForm.value)
-  //     .subscribe(res => {
-  //       alert("Signup Successfull");
-  //       this.registerForm.reset();
-  //       this.route.navigate(['login']);
-  //     })
+  //   this.http.post<any>("/assets/data/user.json", this.registerForm.value).subscribe(res=>{
+  //     alert("Signup Successfull");
+  //     this.registerForm.reset();
+  //     this.route.navigate(['login']);
+  //   })
   // }
-
-  register() {
-    this.http.post<any>("/assets/data/user.json", this.registerForm.value).subscribe(res=>{
-      alert("Signup Successfull");
-      this.registerForm.reset();
-      this.route.navigate(['login']);
-    })
-  }
 
 }

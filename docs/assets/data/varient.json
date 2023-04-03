@@ -1,0 +1,30 @@
+[
+    {
+        "varientId" : 1,
+        "prodId" : 1,
+        "price" : 100,
+        "name" : "gm",
+        "desc" : 100
+    },
+    {
+        "varientId" : 2,
+        "prodId" : 1,
+        "price" : 200,
+        "name" : "gm",
+        "desc" : 250
+    },
+    {
+        "varientId" : 3,
+        "prodId" : 1,
+        "price" : 300,
+        "name" : "gm",
+        "desc" : 500
+    },
+    {
+        "varientId" : 4,
+        "prodId" : 1,
+        "price" : 400,
+        "name" : "kg",
+        "desc" : 1
+    }
+]

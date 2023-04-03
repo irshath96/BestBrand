@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { CartService } from 'src/app/service/cart.service';
 
 @Component({
@@ -8,16 +9,34 @@ import { CartService } from 'src/app/service/cart.service';
 })
 export class HeaderComponent implements OnInit {
 
-public totalItem : number = 0;
+  public totalItem: number = 0;
+  menuType : string = 'default';
 
-  constructor(private cart : CartService) { }
+  constructor(private cart: CartService, private route: Router) { }
 
   ngOnInit(): void {
 
-    this.cart.getproducts().subscribe(res=>{
+    this.cart.getproducts().subscribe(res => {
       this.totalItem = res.length;
     })
   }
+
+  login() {
+    if (localStorage.getItem('role_id')) {
+      this.route.navigate(['../cart']);
+      this.menuType = "user";
+    } else {
+      this.menuType = 'default';
+      this.route.navigate(['../login']);
+
+    }
+  }
+
+  logout() {
+    localStorage.removeItem('role_id');
+    this.route.navigate(['home'])
+  }
+
 
 
 

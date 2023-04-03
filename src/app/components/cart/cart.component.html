@@ -139,14 +139,14 @@
 
 <!-- </ng-container> -->
 
-<ng-container>
+<ng-container *ngIf="products.length != 0">
   
   <div class="container">
 
     <div class="row">
-        <div class="col-md-9">
+        <div class="col-md-12 col-sm-12 col-lg-9">
             <div class="box cart-box">
-                <table class="table table-hover table-borderless caption-top">
+                <table class="table table-hover table-borderless caption-top table-responsive">
                     <caption> Shopping Cart </caption>
                     <thead class="mx-auto">
                         <th scope="col"> SNO </th>
@@ -155,12 +155,13 @@
                         <th scope="col"> Unit </th>
                         <th scope="col"> Price </th>
                         <th scope="col"> Quantity </th>
+                        <th scope="col"> Amount </th>
                         <th scope="col"> Action </th>
                     </thead>
                     <tbody>
 
-                        <tr *ngFor="let item of products; let i = index">
-                            <td> {{i+1}} </td>
+                        <tr *ngFor="let item of products; let a = index">
+                            <td> {{a+1}} </td>
                             <td>
                                 <img src="{{item.image}}" alt="img-1"
                                     class="img-fluid object-fit-cover border rounded" width="75">
@@ -171,22 +172,27 @@
                             </td>
 
                             <td>
-                                <select class="form-select w-75" aria-label="Default select example">
-                                    <option selected> 250-gm </option>
-                                    <option value="1"> 250-gm </option>
-                                    <option value="2"> 500-gm </option>
-                                    <option value="3"> 1-kg </option>
+                                <select class="form-select w-75" aria-label="Default select example" (change)="selectvary(a,item,$event)">
+                                    <option selected> Varient </option>
+                                    <option *ngFor="let vary of item.varient" value={{vary.varientId}}> {{vary.desc}}{{vary.name}} </option>
                                   </select>
                             </td>
 
+
                             <td>
-                                <p> ${{item.price}} </p>
+                                 <!-- <p>{{item?.quantity*item?.varientPrice?.price}}</p> -->
+
+                                 <p> {{item?.varientPrice?.price |currency:"INR"}} </p>
                             </td>
 
                             <td>
-                                <button class="btn btn-danger" (click)="removeQnt(item)"> - </button>
+                                <button class="btn btn-danger" (click)="removeQnt(a,item)"> - </button>
                                 <span> {{item.quantity}} </span>
-                                <button class="btn btn-primary" (click)="addQnt(item)"> + </button>
+                                <button class="btn btn-primary" (click)="addQnt(a,item)"> + </button>
+                            </td>
+
+                            <td>
+                                <p>{{item?.quantity*item?.varientPrice?.price| currency:"INR"}}</p>
                             </td>
 
                             <td>
@@ -205,7 +211,7 @@
             </div>
         </div>
 
-        <div class="col-md-3">
+        <div class="col-md-12 col-sm-12 col-lg-3">
 
             <div class="box bg-white">
                 <h5> Have coupon ? </h5>
@@ -220,11 +226,11 @@
             <div class="tot-amt">
 
                 <div class="box bg-white">
-                    <p class="fs-5"> Total price : <span class="float-end fw-bold"> {{totalItem}} </span> </p>
+                    <p class="fs-5"> Total price : <span class="float-end fw-bold"> {{totalPrice | currency:"INR"}} </span> </p>
                     <p class="fs-5"> Discount : <span class="float-end text-success fw-bold"> - $00.00 </span> </p>
                     <p class="fs-5"> Tax : <span class="float-end text-danger fw-bold"> + $00.00 </span> </p>
                     <hr>
-                    <p class="fs-5"> Total : <span class="float-end fw-bold"> {{totalItem}} </span></p>
+                    <p class="fs-5"> Total : <span class="float-end fw-bold"> {{totalAmount | currency:"INR"}} </span></p>
 
                     <div class="d-grid gap-2">
                         <button type="button" class="btn btn-primary mb-2" [routerLink]="['../confirm']"> Make Purchase </button>
@@ -249,17 +255,17 @@
 <!--------------------------------------------------Empty Cart----------------------------------------------------------------->
 
 
-<!-- <ng-container *ngIf="products.length == 0">
-    <div class="container cart">
+<ng-container *ngIf="products.length == 0">
+    <div class="container cart mb-3">
         <div class="card center align-items-center">
             <h5 class="text-center mt-4"> My Cart </h5>
 
 
-            <img src="./assets/icons/empty.png" alt="Empty Cart" class="img-fluid">
+            <img src="./assets/icons/empty.png" alt="Empty Cart" class="img-fluid eimg">
             <h4 class="text-center"> Your cart is empty! </h4>
             <h6 class="text-center"> Add item to it now </h6>
             <button class="btn btn-primary mb-5" [routerLink]="['../spices']"> Shop Now </button>
 
         </div>
     </div>
-</ng-container> -->
+</ng-container>
