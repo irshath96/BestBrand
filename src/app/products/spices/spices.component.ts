@@ -523,8 +523,8 @@ export class SpicesComponent implements OnInit {
   itemsCart: any = [];
   public products: any;
   token: any;
-   categoryName:any;
-   showActive = '';
+  // categoryName:any;
+  // showActive = '';
 
   constructor(private api: ProductService, private cart: CartService, private http: HttpClient, private route: Router) { }
 
@@ -581,19 +581,15 @@ export class SpicesComponent implements OnInit {
 
   }
 
-  showCategory(item: any) {
-    console.log(item);
-    this.showActive = item.find((cat:any)=>{
-     return cat.name == item.name;
-    })
+  // showCategory(item: any) {
+  //   console.log(item);
+  //   this.showActive = item.find((cat:any)=>{
+  //    return cat.name == item.name;
+  //   })
 
-    console.log(this.showActive)
+  //   console.log(this.showActive)
 
-    this.categoryName = item.name;
-
- }
-
-
-
+  //   this.categoryName = item.name;
 
 }
+

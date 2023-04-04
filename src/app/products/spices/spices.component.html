@@ -13,8 +13,8 @@
         <div class="row py-2">
             <div class="col-md-3 col-12">
         
-                <ul class="list-group" *ngFor="let item of category" (click)="showCategory(item)">
-                    <li class="list-group-item active" aria-current="true"> {{showActive}} </li>
+                <ul class="list-group" *ngFor="let item of category">
+                    <li class="list-group-item active" aria-current="true"> {{item.name}} </li>
                 </ul>
 
             </div>
