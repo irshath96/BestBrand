@@ -1,8 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-
 
 @Component({
   selector: 'app-register',
@@ -11,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class RegisterComponent implements OnInit {
 
-  registerForm !: FormGroup;
+  public registerForm !: FormGroup;
 
   constructor(private http: HttpClient, private fb: FormBuilder, private route: Router) { }
 
@@ -29,25 +28,88 @@ export class RegisterComponent implements OnInit {
       number: ['', Validators.required],
       password: ['', Validators.required],
       role: [''],
-      isActive : [false]
+      isActive: [false]
     })
   }
 
   register() {
-    this.http.post<any>("http://localhost:3000/userDetails", this.registerForm.value)
-      .subscribe(res => {
-        alert("Signup Successfull");
+    this.http.post<any>("http://localhost:3000/userDetails", this.registerForm).
+      subscribe(res => {
+        alert("Register Successfully");
+        // localStorage.setItem('userDetails', this.registerForm);
         this.registerForm.reset();
         this.route.navigate(['login']);
       })
   }
 
-  // register() {
-  //   this.http.post<any>("/assets/data/user.json", this.registerForm.value).subscribe(res=>{
-  //     alert("Signup Successfull");
-  //     this.registerForm.reset();
-  //     this.route.navigate(['login']);
-  //   })
-  // }
+  getPlaceId(event:any){
+
+  }
+
+  // ================================= //
+
+  country = [
+    {
+      'countryId': 1,
+      'name': 'USA',
+      'city' : [
+        {
+          'countryId' : 1,
+          'cityId' : 1,
+          'name' : 'Washinton'
+        },
+        {
+          'countryId' : 1,
+          'cityId' : 2,
+          'name' : 'Texas'
+        }
+      ]
+    },
+    {
+      'countryId': 2,
+      'name': 'INDIA',
+      'city' : [
+        {
+          'countryId' : 2,
+          'cityId' : 1,
+          'name' : 'Tamil Nadu'
+        },
+        {
+          'countryId' : 2,
+          'cityId' : 2,
+          'name' : 'Kerala'
+        }
+      ]
+    },
+    {
+      'countryId': 3,
+      'name': 'UAE',
+      'city' : [
+        {
+          'countryId' : 3,
+          'cityId' : 1,
+          'name' : 'Abudhabi'
+        },
+        {
+          'countryId' : 3,
+          'cityId' : 2,
+          'name' : 'Sharja'
+        }
+      ]
+    }
+  ]
+
+  'city' : [
+    {
+      'countryId' : 1,
+      'cityId' : 1,
+      'name' : 'Washinton'
+    },
+    {
+      'countryId' : 1,
+      'cityId' : 2,
+      'name' : 'Texas'
+    }
+  ]
 
 }

@@ -6,29 +6,30 @@
 
 .head {
     box-shadow: 1px 1px 1px silver;
-    height: 70px;
-    margin-top: 10px;
+    height: 80px;
     margin-bottom: 10px;
-    border-radius: 250px;
 }
 
 .nav-link {
     color: black;
-     font-size: 14px;
+    font-size: 14px;
     font-weight: bold;
     text-transform: uppercase;
+    // background-color: white;
+   // text-align: center;
 }
 
 .active-link {
     background-color: #79c51d;
     border-radius: 5px;
     color: white;
+    text-align: center;
 }
 
 i {
     font-size: 24px;
 }
 
-.dropdown:hover ul {
-    display: block;
-} 
+// .dropdown:hover ul {
+//     display: block;
+// }

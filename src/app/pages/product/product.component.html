@@ -1,104 +1,75 @@
-<section class="mb-5">
+<section id="product mb-5">
 
-    <div class="banner">
-        <img src="./assets/banner/computer.png" alt="banner" class="img-fluid" width="100%">
-    </div>
-
-    <div class="container my-5">
-
-        <div class="row py-4">
-            <div class="col-md-3">
-                <div class="box" routerLink="./product">
-                    <img src="https://baldhaexport.com/wp-content/uploads/2022/03/spices.jpg" alt="cat" class="img-fluid item">
-                </div>
-                <p class="text-center fw-bold fs-6 py-4"> Spices </p>
-            </div>
-
-            <div class="col-md-3">
-                <div class="box">
-                    <img src="https://baldhaexport.com/wp-content/uploads/2022/03/Pulses-Grain.jpg" alt="cat" class="img-fluid item">
-                </div>
-                <p class="text-center fw-bold fs-6 py-4"> Pulses & Grain </p>
-            </div>
-
-            <div class="col-md-3">
-                <div class="box">
-                    <img src="https://baldhaexport.com/wp-content/uploads/2022/03/Dryfruits-1.jpg" alt="cat" class="img-fluid item">
-                </div>
-                <p class="text-center fw-bold fs-6 py-4"> Dry fruits </p>
-            </div>
-
-            <div class="col-md-3">
-                <div class="box">
-                    <img src="https://baldhaexport.com/wp-content/uploads/2022/03/Namkeen-Sweet.jpg" alt="cat" class="img-fluid item">
-                </div>
-                <p class="text-center fw-bold fs-6 py-4"> Namkeen & Sweet </p>
-            </div>
-        </div>
-
-        <!------------------------------------------------
-        ------------------------------------------------------->
-
-        <div class="row py-4">
-            <div class="col-md-3">
-                <div class="box">
-                    <img src="https://baldhaexport.com/wp-content/uploads/2022/03/Flours.jpg" alt="cat" class="img-fluid item">
-                </div>
-                <p class="text-center fw-bold fs-6 py-4"> Flour </p>
-            </div>
-
-            <div class="col-md-3">
-                <div class="box">
-                    <img src="https://baldhaexport.com/wp-content/uploads/2022/03/Rice-1.jpg" alt="cat" class="img-fluid item">
-                </div>
-                <p class="text-center fw-bold fs-6 py-4"> Rice </p>
-            </div>
-
-            <div class="col-md-3">
-                <div class="box">
-                    <img src="https://baldhaexport.com/wp-content/uploads/2022/03/Religious-Products-1.jpg" alt="cat" class="img-fluid item">
-                </div>
-                <p class="text-center fw-bold fs-6 py-4"> Religious Products </p>
-            </div>
-
-            <div class="col-md-3">
-                <div class="box">
-                    <img src="https://baldhaexport.com/wp-content/uploads/2022/03/Kitchen-Cutlery.jpg" alt="cat" class="img-fluid item">
-                </div>
-                <p class="text-center fw-bold fs-6 py-4"> Kitchen Cutlery </p>
-            </div>
-        </div>
-
-        <!-------------------------------------------------------------
-        ---------------------------------------------------------------------->
-
-        <div class="row py-4">
-            <div class="col-md-3">
-                <div class="box">
-                    <img src="https://baldhaexport.com/wp-content/uploads/2022/03/Pickels-Sauce-Chutney.jpg" alt="cat" class="img-fluid item">
-                </div>
-                <p class="text-center fw-bold fs-6 py-4"> Pickels, Sauce & Chutney </p>
-            </div>
-
-            <div class="col-md-3">
-                <div class="box">
-                    <img src="https://baldhaexport.com/wp-content/uploads/2022/03/Bakery-Biscutes.jpg" alt="cat" class="img-fluid item">
-                </div>
-                <p class="text-center fw-bold fs-6 py-4"> Bakery Biscutes </p>
-            </div>
-
-            <div class="col-md-3">
-                <div class="box">
-                    <img src="https://baldhaexport.com/wp-content/uploads/2022/01/other-1.jpg" alt="cat" class="img-fluid item">
-                </div>
-                 <p class="text-center fw-bold fs-6 py-4"> Others </p>
-            </div>
-
-            <div class="col-md-3">
-              
-            </div>
-        </div>
+    <div class="banner p-2">
+        <img src="https://baldhaexport.com/wp-content/uploads/2022/01/Spices.jpg" alt="banner"
+            class="img-fluid rounded-4" width="100%" height="350px">
+        <p class="ban-text fs-2 text-uppercase fw-bold"> Spices </p>
 
     </div>
 
+
+    <div class="container-fluid">
+
+        <div class="row my-3">
+            <div class="col-md-3 col-12">
+
+                <div class="category">
+                    <div class="cat-head">
+                        <h4 class="topic py-2"> Shop by Category </h4>
+                    </div>
+
+                    <ul class="list-group" *ngFor="let item of category">
+                        <li class="list-group-item active" aria-current="true"> {{item.name}} </li>
+                    </ul>
+
+                </div>
+
+                <div class="weight my-4">
+                    <div class="weight-head">
+                        <h4 class="topic py-2"> Shop By Weight </h4>
+                    </div>
+
+                    <button class="btn w-btn"> 250 gm </button> &nbsp;
+                    <button class="btn w-btn"> 500 gm </button> &nbsp;
+                    <button class="btn w-btn"> 1 kg </button> <br> <br>
+
+                    <button class="btn w-btn"> 2 kg </button> &nbsp;
+                    <button class="btn w-btn"> 3 kg </button>
+
+                </div>
+
+            </div>
+
+            <!----------------------------------------------------------------
+            ------------------------------------------------------------------------>
+
+            <div class="col-md-9 col-12 my-3">
+
+                <div class="row row-cols-1 row-cols-md-3 g-3">
+
+                    <div class="col-md-3 col-6" *ngFor="let item of products">
+
+                        <div class="card p-2">
+
+                            <img src="{{item.image}}" alt="Spices1" class="card-img-top prod-img">
+                            <div class="card-body">
+                                <h4 class="card-text text-center fs-6 fw-bold"> {{item.name}} </h4>
+                            </div>
+
+                            <div class="card-btn text-center py-2">
+                                <button type="button" class="btn w-25" (click)="addtoCart(item)"> <i
+                                        class="las la-shopping-cart"> </i> </button>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
 </section>

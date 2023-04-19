@@ -1,9 +1,75 @@
 .banner {
-    height: 350px;
+    position: relative;
 }
 
-.item {
-    object-fit: contain;
-    width: 350px;
+.ban-text {
+    position: absolute;
+    z-index: 100px;
+    top: 100px;
+    left: 20px;
+    color: white;
+}
+
+ul li {
+    color: black;
+    font-weight: bold;
+    border: none;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+    background-color: whitesmoke;
+}
+
+ul li:hover {
+    background-color: #79c51d;
+    border-radius: 15px;
+    text-align: center;
+    color: white;
+
+}
+
+.active {
+    background-color: #79c51d;
+    border-radius: 15px;
+    text-align: center;
+    color: white;
+}
+
+.card {
+    box-shadow: 1px 1px 1px white inset;
     border-radius: 20px;
+}
+
+.card-btn {
+    display: flex;
+    justify-content: center;
+}
+
+.card-btn button {
+    background-color: #79c51d;
+}
+
+.prod-img {
+    border-radius: 18px;
+    object-fit: contain;
+    max-height: 200px;
+
+}
+
+i {
+    font-size: 24px;
+    color: black;
+}
+
+
+.topic {
+    border-left: 2px solid green;
+    border-left-width: 20px;
+    height: 50px;
+    background-color: rgb(180, 177, 177);
+    text-align: center;
+    border-radius: 5px;
+}
+
+.w-btn {
+    border: 2px solid;
 }

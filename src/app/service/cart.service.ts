@@ -1,3 +1,4 @@
+
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 
@@ -11,30 +12,28 @@ export class CartService {
 
   constructor() { }
 
-  getproducts() {
+  getProducts() {
     return this.products.asObservable();
   }
 
   setProducts(product: any) {
     this.cartList.push(...product);
+   // console.log(this.cartList);
     this.products.next(product);
+
   }
 
   addtoCart(product: any) {
-    // console.log(product);
-    // console.log(this.cartList);
-    const findProd = this.cartList.filter((f: any) => {
-      return product.prodId == f.prodId;
+    console.log(product);
+    const findProd = this.cartList.filter((fil: any) => {
+      return product.productId == fil.productId;
     })
-   // console.log(findProd)
     if (findProd.length) {
-      alert('already prod exists')
-    }
-    else {
+      alert("Alredy Products Exists");
+    } else {
       this.cartList.push(product);
       this.products.next(this.cartList);
       this.getTotalPrice();
-     // console.log(this.cartList);
     }
   }
 
@@ -46,10 +45,9 @@ export class CartService {
     return grandTotal;
   }
 
-
   removeCart(product: any) {
     this.cartList.map((a: any, index: any) => {
-      if (product.prodId === a.prodId) {
+      if (product.productId === a.productId) {
         this.cartList.splice(index, 1);
       }
     })
@@ -61,11 +59,6 @@ export class CartService {
     this.products.next(this.cartList);
   }
 
-  // addCart(product: any) {
-  //   this.cartList.push(...product);
-  //   this.products.next(product);
-
-  // }
 
 
 
