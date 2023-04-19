@@ -101,7 +101,7 @@ export class ProductComponent implements OnInit {
     {
       "productId": 1,
       "name": "Chilli Powder",
-      "image": "/assets/products/spices/z1.png",
+      "image": "assets/products/spices/z1.png",
       "quantity": 1,
       "categoryId": 1,
       "variant": [
@@ -138,7 +138,7 @@ export class ProductComponent implements OnInit {
     {
       "productId": 2,
       "name": "Turmeric Powder",
-      "image": "/assets/products/spices/z2.png",
+      "image": "assets/products/spices/z2.png",
       "quantity": 1,
       "categoryId": 1,
       "variant": [
@@ -175,7 +175,7 @@ export class ProductComponent implements OnInit {
     {
       "productId": 3,
       "name": "Cumin Powder",
-      "image": "/assets/products/spices/z3.png",
+      "image": "assets/products/spices/z3.png",
       "quantity": 1,
       "categoryId": 1,
       "variant": [
@@ -212,7 +212,7 @@ export class ProductComponent implements OnInit {
     {
       "productId": 4,
       "name": "Pepper Rasam Powder",
-      "image": "/assets/products/spices/z4.png",
+      "image": "assets/products/spices/z4.png",
       "quantity": 1,
       "categoryId": 1,
       "variant": [
@@ -249,7 +249,7 @@ export class ProductComponent implements OnInit {
     {
       "productId": 5,
       "name": "Fish Fry Masala",
-      "image": "/assets/products/spices/z5.png",
+      "image": "assets/products/spices/z5.png",
       "quantity": 1,
       "categoryId": 1,
       "variant": [
@@ -286,7 +286,7 @@ export class ProductComponent implements OnInit {
     {
       "productId": 6,
       "name": "Mutton Masala",
-      "image": "/assets/products/spices/z6.png",
+      "image": "assets/products/spices/z6.png",
       "quantity": 1,
       "categoryId": 1,
       "variant": [
@@ -323,7 +323,7 @@ export class ProductComponent implements OnInit {
     {
       "productId": 7,
       "name": "Idly Podi Masala",
-      "image": "/assets/products/spices/z7.png",
+      "image": "assets/products/spices/z7.png",
       "quantity": 1,
       "categoryId": 1,
       "variant": [
@@ -360,7 +360,7 @@ export class ProductComponent implements OnInit {
     {
       "productId": 8,
       "name": "Sambar Powder",
-      "image": "/assets/products/spices/z8.png",
+      "image": "assets/products/spices/z8.png",
       "quantity": 1,
       "categoryId": 1,
       "variant": [
@@ -397,7 +397,7 @@ export class ProductComponent implements OnInit {
     {
       "productId": 9,
       "name": "Chicken 65 Masala",
-      "image": "/assets/products/spices/z9.png",
+      "image": "assets/products/spices/z9.png",
       "quantity": 1,
       "categoryId": 1,
       "variant": [
@@ -434,7 +434,7 @@ export class ProductComponent implements OnInit {
     {
       "productId": 10,
       "name": "Garam Masala Powder",
-      "image": "/assets/products/spices/z10.png",
+      "image": "assets/products/spices/z10.png",
       "quantity": 1,
       "categoryId": 1,
       "variant": [
@@ -471,7 +471,7 @@ export class ProductComponent implements OnInit {
     {
       "productId": 11,
       "name": "Fenugreen Powder",
-      "image": "/assets/products/spices/z11.png",
+      "image": "assets/products/spices/z11.png",
       "quantity": 1,
       "categoryId": 1,
       "variant": [
@@ -508,7 +508,7 @@ export class ProductComponent implements OnInit {
     {
       "productId": 12,
       "name": "Garlic Powder",
-      "image": "/assets/products/spices/z12.png",
+      "image": "assets/products/spices/z12.png",
       "quantity": 1,
       "categoryId": 1,
       "variant": [
@@ -545,7 +545,7 @@ export class ProductComponent implements OnInit {
     {
       "productId": 13,
       "name": "Coconut Flours",
-      "image": "/assets/products/flours/Coconut Flour.jpeg",
+      "image": "assets/products/flours/Coconut Flour.jpeg",
       "quantity": 1,
       "categoryId": 5,
       "variant": [
@@ -582,7 +582,7 @@ export class ProductComponent implements OnInit {
     {
       "productId": 14,
       "name": "Gram Flour",
-      "image": "/assets/products/flours/Gram Flour.jpg",
+      "image": "assets/products/flours/Gram Flour.jpg",
       "quantity": 1,
       "categoryId": 5,
       "variant": [
@@ -619,7 +619,7 @@ export class ProductComponent implements OnInit {
     {
       "productId": 15,
       "name": "Maize Flour",
-      "image": "/assets/products/flours/Maize Flour.jpg",
+      "image": "assets/products/flours/Maize Flour.jpg",
       "quantity": 1,
       "categoryId": 5,
       "variant": [
@@ -656,7 +656,7 @@ export class ProductComponent implements OnInit {
     {
       "productId": 16,
       "name": "Pea Flour",
-      "image": "/assets/products/flours/Pea Flour.jpg",
+      "image": "assets/products/flours/Pea Flour.jpg",
       "quantity": 1,
       "categoryId": 5,
       "variant": [
@@ -693,7 +693,7 @@ export class ProductComponent implements OnInit {
     {
       "productId": 17,
       "name": "Peanut Flour",
-      "image": "/assets/products/flours/Peanut Flour.jpg",
+      "image": "assets/products/flours/Peanut Flour.jpg",
       "quantity": 1,
       "categoryId": 5,
       "variant": [
@@ -730,7 +730,7 @@ export class ProductComponent implements OnInit {
     {
       "productId": 18,
       "name": "Rice Flour",
-      "image": "/assets/products/flours/Rice Flour.jpg",
+      "image": "assets/products/flours/Rice Flour.jpg",
       "quantity": 1,
       "categoryId": 5,
       "variant": [
@@ -767,7 +767,7 @@ export class ProductComponent implements OnInit {
     {
       "productId": 19,
       "name": "Wheet Flour",
-      "image": "/assets/products/flours/Wheat Flour.jpeg",
+      "image": "assets/products/flours/Wheat Flour.jpeg",
       "quantity": 1,
       "categoryId": 5,
       "variant": [
@@ -804,7 +804,7 @@ export class ProductComponent implements OnInit {
     {
       "productId": 20,
       "name": "Black Bean",
-      "image": "/assets/products/pulse/Black Bean.jpg",
+      "image": "assets/products/pulse/Black Bean.jpg",
       "quantity": 1,
       "categoryId": 2,
       "variant": [
@@ -841,7 +841,7 @@ export class ProductComponent implements OnInit {
     {
       "productId": 21,
       "name": "Dried Beans",
-      "image": "/assets/products/pulse/Dried Beans.jpeg",
+      "image": "assets/products/pulse/Dried Beans.jpeg",
       "quantity": 1,
       "categoryId": 2,
       "variant": [
@@ -878,7 +878,7 @@ export class ProductComponent implements OnInit {
     {
       "productId": 22,
       "name": "Lobia",
-      "image": "/assets/products/pulse/Lobia.jpg", 
+      "image": "assets/products/pulse/Lobia.jpg", 
       "quantity": 1,
       "categoryId": 2,
       "variant": [
@@ -915,7 +915,7 @@ export class ProductComponent implements OnInit {
     {
       "productId": 23,
       "name": "Mix Daal",
-      "image": "/assets/products/pulse/Mix Dal.jpg",
+      "image": "assets/products/pulse/Mix Dal.jpg",
       "quantity": 1,
       "categoryId": 2,
       "variant": [
@@ -952,7 +952,7 @@ export class ProductComponent implements OnInit {
     {
       "productId": 24,
       "name": "Soy Beans",
-      "image": "/assets/products/pulse/Soy Bean.jpg",
+      "image": "assets/products/pulse/Soy Bean.jpg",
       "quantity": 1,
       "categoryId": 2,
       "variant": [
@@ -989,7 +989,7 @@ export class ProductComponent implements OnInit {
     {
       "productId": 25,
       "name": "Toor Dal",
-      "image": "/assets/products/pulse/Toor Dal.jpg",
+      "image": "assets/products/pulse/Toor Dal.jpg",
       "quantity": 1,
       "categoryId": 2,
       "variant": [
@@ -1026,7 +1026,7 @@ export class ProductComponent implements OnInit {
     {
       "productId": 26,
       "name": "Pinto Bean",
-      "image": "/assets/products/pulse/Pinto Bean.jpg",
+      "image": "assets/products/pulse/Pinto Bean.jpg",
       "quantity": 1,
       "categoryId": 5,
       "variant": [
